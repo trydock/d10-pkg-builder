@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# Install dependencies
+bash dep_pkgs.sh
+
 # Set the install command to be used by mk-build-deps (use --yes for non-interactive)
 install_tool="apt -o Debug::pkgProblemResolver=yes --no-install-recommends --yes"
 
